@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!link>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+  <title>Ejemplo CRUD IndexBD</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/londinium-theme.css" rel="stylesheet" type="text/css" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="js/libs/plugins/mdtoast.min.css">
+  <link href="css/icons.css" rel="stylesheet" type="text/css" />
+  <link href="css/googleapi.css" rel="stylesheet" type="text/css" />
+
+  <link rel="manifest" href="manifest.json">
+
+    <!-- Android -->
+    <meta name="theme-color" content="#3498db">
+
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</!--link>
+
+<body>
+  <!-- Page content -->
+  <div class="page-content">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3>
+          Productos
+          <small>Ejemplo de CRUD con IndexBD</small>
+        </h3>
+      </div>
+    </div>
+    <!-- /page header -->
+
+    <!-- Vertical form outside panel -->
+    <form role="form" class="needs-validation">
+      <div class="block">
+        <h6 class="heading-hr">Registra un Nuevo Producto</h6>
+
+        <div class="form-group">
+          <label>Clave:</label>
+          <input type="text" class="form-control" id="clave" readonly />
+        </div>
+
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input type="text" class="form-control" id="nombre" required/>
+        </div>
+
+        <div class="form-group">
+          <label>Precio:</label>
+          <input type="text" class="form-control" id="costo" required/>
+        </div>
+
+        <div class="form-group">
+          <label>Descripción:</label>
+          <textarea rows="5" cols="5" class="form-control" id="descripcion" required></textarea>
+        </div>
+
+        <div class="form-actions text-right">
+          <input type="submit" value="Guardar" class="btn btn-success" id="guardar" />
+
+          <input type="button" value="Modificar" class="btn btn-warning" id="modificar" />
+          <input type="button" value="Limpiar BD" class="btn btn-danger" id="eliminar-todo" />
+        </div>
+      </div>
+    </form>
+
+    <!-- Default table -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h6 class="panel-title">
+          <i class="icon-table2"></i> Productos Registrados
+        </h6>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Costo</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="form-group">
+        <center id="siRegistros" />
+      </div>
+    </div>
+    <!-- /default table -->
+    <!-- /vertical form outside panel -->
+  </div>
+  <!-- /page content -->
+
+  <!--  MAIN.JS ES EL ARCHIVO DONDE ENCUENTRAN LAS FUNCIONES DE BASE DE DATOS -->
+  <script src="js/main.js" type="module"></script>
+
+  <!-- API DEXIE PARA EL MANEJO DE LA BASE DE DATOS-->
+  <script src='https://unpkg.com/dexie@3.2.4/dist/dexie.js'></script>
+  <!--script src="js/dexie.min.js"
+    integrity="sha512-ZxOA8l07uAOW9hOwLustU8G5Pa9WGUplctjW6OSPYT9VZiS6PzEX7tJdZvUQLswakTUkACm5/rykzrDhds2TJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/libs/plugins/mdtoast.min.js"></script>  
+  <script src="js/app.js"></script>
+</body>
+
+</html>
